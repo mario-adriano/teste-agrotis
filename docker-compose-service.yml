@@ -1,0 +1,17 @@
+version: '3.6'
+
+services:
+  db_postgres:
+    image: 'docker.io/postgres:15.2-alpine'
+    volumes:
+      - '../volumes/teste-backend/db_postgres:/var/lib/postgresql/data'
+    env_file:
+      - '.env.development'
+    ports:
+      - '5432:5432'
+    networks:
+      - agrotis
+
+networks:
+  agrotis:
+    external: true

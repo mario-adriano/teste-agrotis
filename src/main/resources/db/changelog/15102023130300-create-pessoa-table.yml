@@ -1,0 +1,41 @@
+databaseChangeLog:  
+  - changeSet:
+      id: create-pessoa-table
+      author: Mário
+      changes:
+        - createTable:
+            tableName: pessoa
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  defaultValueComputed: "uuid_generate_v4()"
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: nome
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: data_inicial
+                  type: datetime
+              - column:
+                  name: data_final
+                  type: datetime
+              - column:
+                  name: observacoes
+                  type: text
+              - column:
+                  name: propriedade_id
+                  type: uuid
+                  constraints:
+                    foreignKeyName: fk_propriedade
+                    references: propriedade(id)
+              - column:
+                  name: laboratorio_id
+                  type: uuid
+                  constraints:
+                    foreignKeyName: fk_laboratorio
+                    references: laboratorio(id)

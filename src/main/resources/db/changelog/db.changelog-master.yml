@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/15102023121200-create-extensiosn-uuid.yml
+  - include:
+      file: db/changelog/15102023130100-create-laboratorio-table.yml
+  - include:
+      file: db/changelog/15102023130200-create-propiedade-table.yml
+  - include:
+      file: db/changelog/15102023130300-create-pessoa-table.yml

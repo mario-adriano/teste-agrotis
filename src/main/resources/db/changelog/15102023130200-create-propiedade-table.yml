@@ -1,0 +1,25 @@
+databaseChangeLog:  
+  - changeSet:
+      id: create-propriedade-table
+      author: Mário
+      changes:
+        - createTable:
+            tableName: propriedade
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  defaultValueComputed: "uuid_generate_v4()"
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: nome
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: cnpj
+                  type: varchar(14)
+                  constraints:
+                    nullable: false
