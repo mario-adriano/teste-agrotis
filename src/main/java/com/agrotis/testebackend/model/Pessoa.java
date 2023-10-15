@@ -22,7 +22,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @Table(name = "pessoa")
 @Entity
-public class Pessoal implements Persistable<UUID>{
+public class Pessoa implements Persistable<UUID>{
 
     @Id
     @GenericGenerator(name = "UUIDGenerator", strategy = "uuid4")
