@@ -1,5 +1,6 @@
 package com.agrotis.testebackend.service;
 
+import java.util.List;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,10 @@ public class PessoaService {
 
     @Autowired
     private PessoaRepository pessoaRepository;
+
+    public List<Pessoa> findAll() {
+        return pessoaRepository.findAll();
+    }
 
     public Pessoa save(@Valid Pessoa pessoa) {
         return pessoaRepository.save(pessoa);

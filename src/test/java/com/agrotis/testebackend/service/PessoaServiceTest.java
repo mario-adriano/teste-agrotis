@@ -8,8 +8,12 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.agrotis.testebackend.model.Laboratorio;
 import com.agrotis.testebackend.model.Pessoa;
+import com.agrotis.testebackend.model.Propriedade;
+import com.agrotis.testebackend.repository.LaboratorioRepository;
 import com.agrotis.testebackend.repository.PessoaRepository;
+import com.agrotis.testebackend.repository.PropriedadeRepository;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -21,6 +25,10 @@ public class PessoaServiceTest {
 
     @Autowired
     private PessoaRepository pessoaRepository;
+    @Autowired
+    private LaboratorioRepository laboratorioRepository;
+    @Autowired
+    private PropriedadeRepository propriedadeRepository;
 
     private Pessoa pessoa;
 
@@ -36,13 +44,27 @@ public class PessoaServiceTest {
     @BeforeEach
     public void init() {
         pessoaRepository.deleteAll();
+        laboratorioRepository.deleteAll();
+        propriedadeRepository.deleteAll();
+
+        Laboratorio laboratorio = new Laboratorio();
+        laboratorio.setNome("lab1");
+        laboratorioRepository.save(laboratorio);
+
+        Propriedade propriedade = new Propriedade();
+        propriedade.setNome("pro1");
+        propriedade.setCnpj("95935125000110");
+        propriedadeRepository.save(propriedade);
         
         pessoa = new Pessoa();
         pessoa.setNome(DEFAULT_NOME);
         pessoa.setDataInicial(DEFAULT_DATA_INICIAL);
         pessoa.setDataFinal(DEFAULT_DATA_FINAL);
         pessoa.setObservacoes(DEFAULT_OBSERVACOES);
+        pessoa.setLaboratorio(laboratorio);
+        pessoa.setPropriedade(propriedade);
     }
+
 
     @Test
     public void testSavePessoa() {

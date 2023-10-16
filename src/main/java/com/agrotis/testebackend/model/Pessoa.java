@@ -9,6 +9,8 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -47,6 +49,16 @@ public class Pessoa implements Persistable<UUID>{
 
     @Column(name = "observacoes")
     private String observacoes;
+
+    @ManyToOne
+    @JoinColumn(name = "laboratorio_id")
+    @NotNull
+    private Laboratorio laboratorio;
+
+    @ManyToOne
+    @JoinColumn(name = "propriedade_id")
+    @NotNull
+    private Propriedade propriedade;
 
     @JsonIgnore
     @Override
