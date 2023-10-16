@@ -1,0 +1,351 @@
+{
+	"info": {
+		"_postman_id": "12ef9f80-4929-4337-8dc1-ccce176fcdd2",
+		"name": "Teste-Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1828372"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/pessoa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"José\",\n    \"dataInicial\": \"2023-10-15\",\n    \"dataFinal\": \"2023-10-16\",\n    \"observacoes\": \"observacoes\",\n    \"laboratorio\": {\n        \"id\": \"24c5eb46-d458-427c-a5e0-05120e8076dc\",\n        \"nome\": \"lab1\",\n        \"pessoas\": []\n    },\n    \"propriedade\": {\n        \"id\": \"39c53125-ac98-48bd-af54-c6cc5255a83c\",\n        \"nome\": \"Pro1\",\n        \"cnpj\": \"58387280000112\",\n        \"pessoas\": []\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/pessoa",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pessoa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/pessoa/all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/pessoa/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pessoa",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/pessoa",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"\",\n    \"nome\": \"José\",\n    \"data_inicial\": \"2023-10-15\",\n    \"data_final\": \"2023-10-16\",\n    \"observacoes\": \"observacoes\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/pessoa",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pessoa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/pessoa/43486705-e69c-42d4-8eb8-661bce8e94c0",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/pessoa/43486705-e69c-42d4-8eb8-661bce8e94c0",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pessoa",
+						"43486705-e69c-42d4-8eb8-661bce8e94c0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/pessoa/all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/pessoa/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pessoa",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/laboratorio/all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/laboratorio/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"laboratorio",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/laboratorio",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Lab1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/laboratorio",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"laboratorio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/laboratorio",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"85d63bca-3b12-43de-9370-8f9edf8f8fdb\",\n    \"nome\": \"Lab1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/laboratorio",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"laboratorio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/laboratorio/85d63bca-3b12-43de-9370-8f9edf8f8fdb",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/laboratorio/85d63bca-3b12-43de-9370-8f9edf8f8fdb",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"laboratorio",
+						"85d63bca-3b12-43de-9370-8f9edf8f8fdb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/propriedade/all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/propriedade/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"propriedade",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/propriedade",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Pro1\",\n    \"cnpj\": \"58387280000112\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/propriedade",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"propriedade"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/propriedade",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"6f01d6de-60b7-4c1d-ac68-53cd8806041f\",\n    \"nome\": \"Pro1\",\n    \"cnpj\": \"58387280000112\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/propriedade",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"propriedade"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/propriedade/6f01d6de-60b7-4c1d-ac68-53cd8806041f",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/propriedade/6f01d6de-60b7-4c1d-ac68-53cd8806041f",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"propriedade",
+						"6f01d6de-60b7-4c1d-ac68-53cd8806041f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/laboratorio/filtrar?dataInicialStart=2023-01-01&dataInicialEnd=2023-12-31&dataFinalStart=2023-10-16&dataFinalEnd=2024-12-31&observacoesKeyword=obser&quantidadeMinima=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/laboratorio/filtrar?dataInicialStart=2023-01-01&dataInicialEnd=2023-12-31&dataFinalStart=2023-10-16&dataFinalEnd=2024-12-31&observacoesKeyword=obser&quantidadeMinima=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"laboratorio",
+						"filtrar"
+					],
+					"query": [
+						{
+							"key": "dataInicialStart",
+							"value": "2023-01-01"
+						},
+						{
+							"key": "dataInicialEnd",
+							"value": "2023-12-31"
+						},
+						{
+							"key": "dataFinalStart",
+							"value": "2023-10-16"
+						},
+						{
+							"key": "dataFinalEnd",
+							"value": "2024-12-31"
+						},
+						{
+							"key": "observacoesKeyword",
+							"value": "obser"
+						},
+						{
+							"key": "quantidadeMinima",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
