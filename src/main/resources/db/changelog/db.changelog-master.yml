@@ -7,3 +7,5 @@ databaseChangeLog:
       file: db/changelog/15102023130200-create-propiedade-table.yml
   - include:
       file: db/changelog/15102023130300-create-pessoa-table.yml
+  - include:
+      file: db/changelog/16102023130300-unique-cnpjpropriedade-table.yml
