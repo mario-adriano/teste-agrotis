@@ -47,10 +47,13 @@ public class PessoaServiceTest {
         laboratorioRepository.deleteAll();
         propriedadeRepository.deleteAll();
 
-        Laboratorio laboratorio = new Laboratorio(null, "Lab1");
+        Laboratorio laboratorio = new Laboratorio();
+        laboratorio.setNome("lab1");
         laboratorioRepository.save(laboratorio);
 
-        Propriedade propriedade = new Propriedade(null, "Lab1", "95935125000110");
+        Propriedade propriedade = new Propriedade();
+        propriedade.setNome("pro1");
+        propriedade.setCnpj("95935125000110");
         propriedadeRepository.save(propriedade);
         
         pessoa = new Pessoa();

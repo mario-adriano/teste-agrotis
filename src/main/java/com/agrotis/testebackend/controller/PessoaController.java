@@ -1,5 +1,6 @@
 package com.agrotis.testebackend.controller;
 
+import java.util.List;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,13 @@ public class PessoaController {
 
     @Autowired
     private PessoaService pessoaService;
+
+    @ResponseBody
+    @RequestMapping("/all")
+    public List<Pessoa> listar() {
+        List<Pessoa> pessoas = pessoaService.findAll();
+        return pessoas;
+    }
 
     @PostMapping
     @ResponseBody

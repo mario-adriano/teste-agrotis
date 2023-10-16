@@ -1,5 +1,6 @@
 package com.agrotis.testebackend.controller;
 
+import java.util.List;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,13 @@ public class PropriedadeController {
 
     @Autowired
     private PropriedadeService propriedadeService;
+
+    @ResponseBody
+    @RequestMapping("/all")
+    public List<Propriedade> listar() {
+        List<Propriedade> propriedades = propriedadeService.findAll();
+        return propriedades;
+    }
 
     @PostMapping
     @ResponseBody
