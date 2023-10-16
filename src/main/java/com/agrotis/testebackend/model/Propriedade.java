@@ -11,7 +11,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
-
+import jakarta.validation.constraints.Size;
+import org.hibernate.validator.constraints.br.CNPJ;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -34,6 +35,12 @@ public class Propriedade implements Persistable<UUID>{
     @Column(name = "nome")
     @NotBlank(message = "Nome é obrigatório")
     private String nome;
+
+    @Column(name = "cnpj")
+    @NotBlank(message = "CNPJ é obrigatório")
+    @Size(min = 14, max = 14)
+    @CNPJ
+    private String cnpj;
 
     @JsonIgnore
     @Override
