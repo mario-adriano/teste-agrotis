@@ -3,14 +3,16 @@ package com.agrotis.testebackend.model;
 import org.hibernate.annotations.GenericGenerator;
 import org.springframework.data.domain.Persistable;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import jakarta.persistence.Lob;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -43,10 +45,10 @@ public class Pessoa implements Persistable<UUID>{
     @NotNull(message = "Data Final é obrigatório")
     private LocalDate dataFinal;
 
-    @Lob
     @Column(name = "observacoes")
     private String observacoes;
 
+    @JsonIgnore
     @Override
     public boolean isNew() {
         return id == null;
