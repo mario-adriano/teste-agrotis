@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-unique-constraint-to-cnpj
+      author: Mário
+      changes:
+        - addUniqueConstraint:
+            tableName: propriedade
+            columnNames: cnpj
+            constraintName: uq_cnpj
